@@ -1,0 +1,23 @@
+
+<div class="row" style="margin:5%">
+  <div class="col-md-12">
+    <table class="table table-bordered table-striped  table1" >
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Company</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let u of this.api.userlist let i of index"  >
+        <td>{{u.name}}</td>
+        <td>{{u.email}}</td>
+        <td>{{u.address["street"]}}</td>
+        <td>{{u.company["name"]}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="removeuser(u.name)" >Remove</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

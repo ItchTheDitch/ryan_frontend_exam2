@@ -1,0 +1,9 @@
+<div class="container " style="margin-top:30px">
+  <ul class="nav nav-tabs " style="margin-bottom:-2px">
+    <li id="tab1" role="presentation" (click)="ChangeTab('tab1','tab2')" class="active"><a routerLink="/" href="#">User List</a></li>
+    <li id="tab2" role="presentation" (click)="ChangeTab('tab2','tab1')"><a routerLink="/adduser" href="#">Add User</a></li>
+  </ul>
+  <div class="content-container border-table">
+    <router-outlet></router-outlet>
+  </div>
+</div>
